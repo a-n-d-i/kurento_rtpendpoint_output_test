@@ -17,7 +17,7 @@ I attempt
 Please use the following command.  
 ```
   npm install
-  node main --ws_uri [kurento server url]
+  node main --ws_uri [kurento server url]  --file_uri [record file path] --video_file [video file path playing by Player Endpoint ]
   example) node main --ws_uri "ws://192.168.7.119:8888/kurento" --file_uri "file:///tmp/recod.webm" --video_file "file:///home/test/Desktop//output.mp4"
 ```
 This program input input.sdp to RtpEndpointForPlayer.processOffer.
@@ -28,8 +28,8 @@ But nothing was played.
 
 The files sent by PlayerEndpoint are as follows.  
   http://www.gomplayer.jp/img/sample/mp4_h264_aac.mp4  
-  (This is short movie. So I have linked several videos with the following command.)
-  (ffmpeg -i input1.mp4 -i input2.mp4 -filter_complex "concat=n=2:v=1:a=1" output.mp4)
+  (This is short movie. So I have linked several videos with the following command.)  
+  (ffmpeg -i input1.mp4 -i input2.mp4 -filter_complex "concat=n=2:v=1:a=1" output.mp4)  
 Recording is done. 
 
 Why?
